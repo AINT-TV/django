@@ -21,6 +21,8 @@ Note: We assume that the whole project is located at `./project`, and structured
 ├─ manage.py
 ```
 
+## Creating and Installing an App
+
 To create an app called `myapp`, change the current directory to `./project/` (where the `manage.py` exists), and run `python manage.py startapp myapp`.
 To make the Django project recognize this app (a.k.a "Install" it), edit the `settings.py` file located at `./project/project/settings.py`.
 
@@ -37,3 +39,31 @@ INSTALLED_APPS = [
     "myapp"
 ]
 ```
+
+Note that after creating an app, a new folder named after the newly created app will be created at `./project/myapp/`, and the structure of the project will become like this:
+
+```
+./project/
+├─ db.sqlite3
+├─ project
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+├─ manage.py
+├─ myapp
+│   ├── __pycache__
+│   ├── migrations
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── views.py    (here we can define views associated with this app)
+```
+
+## Defining a View
+
+
