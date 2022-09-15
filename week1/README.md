@@ -10,11 +10,8 @@ Note: We assume that the whole project is located at `/Users/armanmalekzadeh/pro
 
 ```
 /Users/armanmalekzadeh/project/
-|
-----db.sqlite3
-----project
-|
---------test
-----manage.py
+├─db.sqlite3
+├─project
+│   ├──test
+├─manage.py
 ```
-
