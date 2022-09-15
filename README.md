@@ -11,4 +11,4 @@ Table of Contents:
 
 # Code Tutorials
 
-- [Week 1](https://github.com/AINT-TV/django/blob/main/week1/README.md)
+- [Week 1: Apps and Views](https://github.com/AINT-TV/django/blob/main/week1/README.md)
