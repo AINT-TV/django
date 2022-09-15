@@ -4,3 +4,13 @@ An app in django is a part of the whole project. For instance, when designing a 
 
 Views are functions or classes that receive a web request and return a web response (e.g., `HttpResponse`).
 
+# Code Tutorial
+
+Note: We assume that the whole project is located at `/Users/armanmalekzadeh/djangoproject`, and structured as follows:
+
+```
+/Users/armanmalekzadeh/djangoproject/
+|
+|-------
+```
+
