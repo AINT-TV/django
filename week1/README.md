@@ -21,6 +21,8 @@ Note: We assume that the whole project is located at `./project`, and structured
 ├─ manage.py
 ```
 
+Also, we assume that the user runs the Django server using the `9000` port.
+
 ## Creating and Installing an App
 
 To create an app called `myapp`, change the current directory to `./project/` (where the `manage.py` exists), and run `python manage.py startapp myapp`.
