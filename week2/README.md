@@ -54,4 +54,39 @@ TEMPLATES = [
 
 We need to change the value associated with the `DIRS` key, and add our "templates" path to its list. So, `"DIRS": []` will be changed to `"DIRS": ['templates']`
 
-Inside this folder, we create an HTML file named `index.html`. Now,  
+## Create a Template
+
+Inside the `templates` folder (located at `./project/templates/`), we create an HTML file named `index.html` like this:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    Hello World!
+</body>
+</html>
+```
+
+## Associate the Template with a View
+
+Now that our template is created, we should define how/when it should be used. To do this, we need a "view". As we previously saw, the views associated with our `myapp` app are defined inside the `views.py` file located at `./project/myapp/views.py`. We can see that the `render` function is imported inside this file. This function combines a given template with a given context dictionary and returns an HttpResponse object with that rendered text. However, in this simple example, we do not have a "context dictionary". We can define our view like this:
+
+```
+def hello(request):
+    return render(request, 'index.html')
+```
+
+Note that Django knows where to look for `index.html` since we have introduced its path to it (by editing the `settings.py` file). 
+
+## Define a URL Pattern
+
+The last step is to edit the `urls.py` file as we did before. This file is located at `./project/project/urls.py`. We only need to add the following line to it:
+
+```
+path('', hello)
+```
+
+From now on, whenever we look for `127.0.0.1:9000`, we will see the contents of our `index.html` rendered as a `HttpResponse`.
