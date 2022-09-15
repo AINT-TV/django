@@ -66,4 +66,26 @@ Note that after creating an app, a new folder named after the newly created app 
 
 ## Defining a View
 
+To define a `hello` view associated with `myapp`, we should edit the `views.py` file located at `./project/myapp/views.py`. We write the following lines inside this file:
+
+```
+from django.http import HttpResponse
+
+def hello(request):
+    return HttpResponse('hello world!')
+```
+
+As you see, our `hello` view recieves a `request`, and returns a `HttpResponse` (as it was supposed to). Now, we should specify when this view should be called, in other words, when it should be used!
+
+To do this, we have to define a "URL Pattern" associated with it. This can be done by editing the `urls.py` file located at `./project/project/urls.py`. We should add the following lines to this file:
+
+```
+from myapp.views import hello
+
+urlpatterns = [
+    path("",hello)
+]
+```
+
+This means that whenever the user sends its request by looking for the `127.0.0.1:9000` url, the `hello` app should be called to prepare a response. If we change the above piece of code and write `path("greet",hello)` instead, it means that the `hello` view should be called if the user looks for `127.0.0.1:9000/greet`.
 
