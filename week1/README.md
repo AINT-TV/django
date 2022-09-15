@@ -10,15 +10,15 @@ Note: We assume that the whole project is located at `./project`, and structured
 
 ```
 ./project/
-├─db.sqlite3
-├─project
-│   ├──__init__.py
-│   ├──__pycache__
-│   ├──asgi.py
-│   ├──settings.py
-│   ├──urls.py
-│   ├──wsgi.py
-├─manage.py
+├─ db.sqlite3
+├─ project
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+├─ manage.py
 ```
 
 To create an app called `myapp`, change the current directory to `./project/` (where the `manage.py` exists), and run `python manage.py startapp myapp`.
