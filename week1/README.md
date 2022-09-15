@@ -6,11 +6,15 @@ Views are functions or classes that receive a web request and return a web respo
 
 # Code Tutorial
 
-Note: We assume that the whole project is located at `/Users/armanmalekzadeh/djangoproject`, and structured as follows:
+Note: We assume that the whole project is located at `/Users/armanmalekzadeh/project`, and structured as follows:
 
 ```
-/Users/armanmalekzadeh/djangoproject/
+/Users/armanmalekzadeh/project/
 |
-|-------
+----db.sqlite3
+----project
+|
+--------test
+----manage.py
 ```
 
